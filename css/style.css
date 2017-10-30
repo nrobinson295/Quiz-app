@@ -25,3 +25,9 @@ button {
 .final {
 	text-align: center;
 }
+.question {
+	display: none;
+}
+.final {
+	display: none;
+}

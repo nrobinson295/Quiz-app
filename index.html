@@ -6,69 +6,75 @@
     <link href='//fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
-<header>Sci-fi Quiz!</header>
-<h1>This Quiz will test your knowledge of Sci-fi hit TV series</h1>
-<div class="startButton">
-    <button class="startQuiz">Start!</button>
+<div class="intro">
+    <header>Sci-fi Quiz!</header>
+    <h1>This Quiz will test your knowledge of Sci-fi hit TV series</h1>
 </div>
+
 <div class="questions">
-    <div>
-        <p class="questionOne">1. In the 1997-2007 hit series "Stargate SG-1", What were the original actors names of
+    <div class="question one">
+        <p>1. In the 1997-2007 hit series "Stargate SG-1", What were the original actors names of
             the
             four SG-1 team members?</p>
         <ul>
-            <li class="questionOne-answerOne">A. Richard Dean Anderson, Amanda Tapping, Michael Shanks, Christopher
+            <li class="answer" answer="A">A. Richard Dean Anderson, Amanda Tapping, Michael Shanks, Christopher
                 Judge
             </li>
-            <li class="questionOne-answerTwo">B. Amanda Tapping, Richard Dean Anderson, Jason Momoa, David Hewlett</li>
-            <li class="questionOne-answerThree">C. Jason Momoa, Joe Flanigan, Rachel Luttrell, David Hewlett</li>
-            <li class="questionOne-answerFour">D. Michael Shanks, Christopher Judge, Claudia Black, Ben Browder</li>
+            <li class="answer" answer="B">B. Amanda Tapping, Richard Dean Anderson, Jason Momoa, David Hewlett</li>
+            <li class="answer" answer="C">C. Jason Momoa, Joe Flanigan, Rachel Luttrell, David Hewlett</li>
+            <li class="answer" answer="D">D. Michael Shanks, Christopher Judge, Claudia Black, Ben Browder</li>
         </ul>
     </div>
-    <div>
-        <p class="questionTwo">In the one season hit "Firefly" in 2002, What was Nathan Fillion's character name?</p>
+    <div class="question two">
+        <p>2. In the one season hit "Firefly" in 2002, What was Nathan Fillion's character name?</p>
         <ul>
-            <li class="questionTwo-answerOne">A. Hoban Washburne</li>
-            <li class="questionTwo-answerTwo">B. Richard Castle</li>
-            <li class="questionTwo-answerThree">C. Malcolm Reynolds</li>
-            <li class="questionTwo-answerFour">D. Jayne Cobb</li>
+            <li class="answer" answer="A">A. Hoban Washburne</li>
+            <li class="answer" answer="B">B. Richard Castle</li>
+            <li class="answer" answer="C">C. Malcolm Reynolds</li>
+            <li class="answer" answer="D">D. Jayne Cobb</li>
         </ul>
     </div>
-    <div>
-        <p class="questionThree">In the 2004-2009 series "Stargate Atlantis", What is Dr. Rodney McKay deathly allergic
+    <div class="question three">
+        <p>3. In the 2004-2009 series "Stargate Atlantis", What is Dr. Rodney McKay deathly allergic
             to?</p>
         <ul>
-            <li class="questionThree-answerOne">A. Seafood</li>
-            <li class="questionThree-answerTwo">B. Lemons</li>
-            <li class="questionThree-answerThree">C. Peanuts</li>
-            <li class="questionThree-answerFour">D. Citrus</li>
+            <li class="answer" answer="A">A. Seafood</li>
+            <li class="answer" answer="B">B. Lemons</li>
+            <li class="answer" answer="C">C. Peanuts</li>
+            <li class="answer" answer="D">D. Citrus</li>
         </ul>
     </div>
-    <div>
-        <p class="questionFour">In the 1995-2000 fox/sci-fi hit series "Sliders", Who played the character Quinn
+    <div class="question four">
+        <p>4. In the 1995-2000 fox/sci-fi hit series "Sliders", Who played the character Quinn
             Mallory?</p>
         <ul>
-            <li class="questionFour-answerOne">A. John Rhys-Davies</li>
-            <li class="questionFour-answerTwo">B. Jerry O'Connell</li>
-            <li class="questionFour-answerThree">C. Cleavant Derricks</li>
-            <li class="questionFour-answerFour">D. Charlie O'Connell</li>
+            <li class="answer" answer="A">A. John Rhys-Davies</li>
+            <li class="answer" answer="B">B. Jerry O'Connell</li>
+            <li class="answer" answer="C">C. Cleavant Derricks</li>
+            <li class="answer" answer="D">D. Charlie O'Connell</li>
         </ul>
     </div>
-    <div>
-        <p class="questionFive">In the 2013-2015 hit series "Defiance", What alien race is Irisa?</p>
+    <div class="question five">
+        <p>5. In the 2013-2015 hit series "Defiance", What alien race is Irisa?</p>
         <ul>
-            <li class="questionFive-answerOne">A. Votan</li>
-            <li class="questionFive-answerTwo">B. Goa'uld</li>
-            <li class="questionFive-answerThree">C. Cylon</li>
-            <li class="questionFive-answerFour">D. Irathient</li>
+            <li class="answer" answer="A">A. Votan</li>
+            <li class="answer" answer="B">B. Goa'uld</li>
+            <li class="answer" answer="C">C. Cylon</li>
+            <li class="answer" answer="D">D. Irathient</li>
         </ul>
     </div>
 </div>
 <div class="final">
     <h2>Congrats!</h2>
     <p>You have finished the quiz. Lets take a look at how you did!</p>
+</div>
+<p class="feedback"></p>
+<div class="startButton">
+    <button class="startQuiz">Start!</button>
 </div>
 </body>
 </html>
