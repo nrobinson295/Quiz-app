@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    var currentScore = 0;
     var counter = 0;
     var currentQuestion = 0;
     var quiz = {
@@ -43,36 +43,69 @@ $(document).ready(function () {
         $('.tracker').hide();
         $('.feedback').html('');
         $(quiz.questions[currentQuestion].name).show();
+        if (currentQuestion === 6) {
+            $('.startQuiz').hide();
+            $('.restart').show();
+            $('.score').html(currentScore + '%');
+        } else {
+            $('.restart').hide();
+            $('.startQuiz').show();
+        }
     }
 
     function nextQuestion() {
         currentQuestion++;
         render();
     }
+
     function questionCounter() {
-        $('.tracker').show();
+
         counter += 1;
+        if (counter > 5) {
+            $('.tracker').hide();
+        } else {
+            $('.tracker').show();
+        }
+        $('span').html(counter);
 
     }
-    function checkAnswer(chosen){
-        if(chosen === quiz.questions[currentQuestion].answer){
+
+    function checkAnswer(chosen) {
+        if (chosen === quiz.questions[currentQuestion].answer) {
             $('.feedback').html('Correct! you guessed the right answer');
+            currentScore += 20;
             //show correct
-        } else{
+        } else {
             $('.feedback').html('Incorrect, the correct answer was ' + quiz.questions[currentQuestion].answer);
             //show incorrect
         }
 
     }
 
-    $('.startQuiz').click(function() {
+    function restartGame() {
+        counter = 0;
+        currentQuestion = 0;
+        currentScore = 0;
+        render();
+    }
+
+    $('.restart').click(function () {
+        restartGame();
+    })
+    $('.startQuiz').click(function () {
         nextQuestion();
+        questionCounter();
         $('.startQuiz').html('Next');
     })
-    $('.answer').click(function(){
+    $('.answer').click(function () {
         var chosen = $(this).attr('answer');
         checkAnswer(chosen);
     })
+
+    function score() {
+
+    }
+
     render();
 
     // on .click() on the start button the first question will appear. .show() and .hide() will be what i need to use.
