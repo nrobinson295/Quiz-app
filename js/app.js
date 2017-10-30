@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-
+    var counter = 0;
     var currentQuestion = 0;
     var quiz = {
         questions: [
@@ -40,6 +40,7 @@ $(document).ready(function () {
         $('.question').hide();
         $('.intro').hide();
         $('.final').hide();
+        $('.tracker').hide();
         $('.feedback').html('');
         $(quiz.questions[currentQuestion].name).show();
     }
@@ -47,6 +48,11 @@ $(document).ready(function () {
     function nextQuestion() {
         currentQuestion++;
         render();
+    }
+    function questionCounter() {
+        $('.tracker').show();
+        counter += 1;
+
     }
     function checkAnswer(chosen){
         if(chosen === quiz.questions[currentQuestion].answer){
